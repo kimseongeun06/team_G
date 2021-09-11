@@ -16,7 +16,7 @@ public class Car {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		this.x = x;
+		this.x = a;
 		this.y = y;
 	}
 }

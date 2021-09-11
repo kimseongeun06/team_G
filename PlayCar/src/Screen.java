@@ -22,7 +22,7 @@ public class Screen extends Canvas implements KeyListener {
 	public void paint(Graphics g) {
 		// TODO Auto-generated method stub
 		super.paint(g);
-		g.drawImage(car[0].image, car[0].x, car[0].y, this);
+		g.drawImage(car[a].image, car[0].x, car[0].y, this);
 		g.drawImage(car[1].image, car[1].x, car[1].y, this);
 	}
 
