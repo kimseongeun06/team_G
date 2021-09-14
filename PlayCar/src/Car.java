@@ -15,7 +15,7 @@ public class Car {
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-			// TEST File
+			// TEST File 1
 		}
 		this.x = x;
 		this.y = y;
