@@ -14,6 +14,7 @@ public class Car {
 			this.image = ImageIO.read(new File(imagePath));
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
+			// TEST File
 			e.printStackTrace();
 		}
 		this.x = x;
