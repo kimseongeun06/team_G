@@ -7,13 +7,13 @@ import javax.swing.JPanel;
 
 
 @SuppressWarnings("serial")
-public class DrawBorad extends JPanel{
+public class DrawBoard extends JPanel{
    private Graphics gboard, gbuff;    
    private Image buff;
    MapSize size;
    Map map;
    final int STONE_SIZE=28;
-   public DrawBorad(MapSize m,Map map) {
+   public DrawBoard(MapSize m,Map map) {
       // TODO Auto-generated constructor stub
       setBackground(new Color(206,167,61));
       size=m;

@@ -5,9 +5,9 @@ public class MouseEventHandler extends MouseAdapter {
 	Map map;
 	int x,y;
 	MapSize ms;
-	DrawBorad d;
+	DrawBoard d;
 	GUI main;
-	public MouseEventHandler(Map m,MapSize ms,DrawBorad d,GUI main) {
+	public MouseEventHandler(Map m,MapSize ms,DrawBoard d,GUI main) {
 		// TODO Auto-generated constructor stub
 		map=m;
 		this.ms=ms;
@@ -22,7 +22,7 @@ public class MouseEventHandler extends MouseAdapter {
 		int x=(int)Math.round(arg0.getX()/(double)ms.getCell());
         int y=(int)Math.round(arg0.getY()/(double)ms.getCell())-2;
         if(x==0 || y==0 || x==ms.getSize()+1 || y==ms.getSize()+1)return;
-        if(map.getXY(y, x)==map.getBlack()||map.getXY(y, x)==map.getWhite())return;
+        if(map.getXY(y, x)==map.getBlack()||map.getXY(y, x)==map.getWhite()||(map.getXY(y, x)==map.getobstacle()))return;
 	    
 	    System.out.println(x+" "+y);
 	    map.setMap(y, x);

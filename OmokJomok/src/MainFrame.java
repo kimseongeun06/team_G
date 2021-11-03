@@ -29,6 +29,7 @@ public class MainFrame extends JFrame {
 	@SuppressWarnings("unused")
 	private GUI GUI;
    private JPanel contentPane;
+   private OnePlayerGUI oGui;
 
    /**
     * Launch the application.

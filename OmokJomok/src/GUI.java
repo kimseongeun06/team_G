@@ -17,7 +17,7 @@ public class GUI extends JFrame{
 	public static boolean obstacle = false;
       public GUI(String title) {
       Map map=new Map(size, obstacle);
-      DrawBorad d=new DrawBorad(size, map);
+      DrawBoard d=new DrawBoard(size, map);
       setTitle("OmokJomok");
       getContentPane().add(d);
       this.setBounds(200,20,650,700);
@@ -55,13 +55,6 @@ public class GUI extends JFrame{
       });
       mnNewMenu.add(mntmNewMenuItem_1);
       
-      
-      JMenu mnNewMenu_2 = new JMenu("\uAE30\uD0C0");
-      menuBar.add(mnNewMenu_2);
-      
-      JMenuItem mntmNewMenuItem_4 = new JMenuItem("\uC815\uBCF4");
-      mnNewMenu_2.add(mntmNewMenuItem_4);
-      
       JMenu mnNewMenu_3 = new JMenu("무르기");
       menuBar.add(mnNewMenu_3);
       
@@ -80,6 +73,7 @@ public class GUI extends JFrame{
    }
    public void showPopUp(String message) {
       JOptionPane.showMessageDialog(this, message,"축하합니다",JOptionPane.INFORMATION_MESSAGE);
-      System.exit(0);
+      new MainFrame();
+      setVisible(false);
    }
 }

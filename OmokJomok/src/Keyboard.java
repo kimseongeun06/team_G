@@ -7,10 +7,10 @@ public class Keyboard extends JFrame implements KeyListener{
 	Map map;
 	int x=11,y=11;
 	MapSize ms;
-	DrawBorad d;
+	DrawBoard d;
 	GUI main;
 	
-	public Keyboard(Map m,MapSize ms,DrawBorad d,GUI main) {
+	public Keyboard(Map m,MapSize ms,DrawBoard d,GUI main) {
 		// TODO Auto-generated constructor stub
 		this.map=m;
 		this.ms=ms;
