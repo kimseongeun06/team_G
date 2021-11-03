@@ -30,7 +30,6 @@ public class Map{
          map[i]=new int[ms.getSize()+2];
        d.setSize(ms.getSize()*(ms.getCell()+1)+ms.getSize(), 
              ms.getSize()*(ms.getCell()+1)+ms.getSize());
-      System.out.println("map");
    }    
      
      

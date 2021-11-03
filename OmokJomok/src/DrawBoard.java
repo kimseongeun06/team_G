@@ -2,8 +2,8 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
-
 import javax.swing.JPanel;
+
 
 
 @SuppressWarnings("serial")
@@ -18,7 +18,6 @@ public class DrawBoard extends JPanel{
       setBackground(new Color(206,167,61));
       size=m;
       setLayout(null);
-      System.out.println("board");
       this.map=map;
    }
     public void update(Graphics g){        

@@ -18,7 +18,7 @@ public class MouseEventHandler extends MouseAdapter {
 	public void mousePressed(MouseEvent arg0) {
 		// TODO Auto-generated method stub
 		super.mousePressed(arg0);
-		System.out.println("mouse");
+		System.out.println("마우스 입력");
 		int x=(int)Math.round(arg0.getX()/(double)ms.getCell());
         int y=(int)Math.round(arg0.getY()/(double)ms.getCell())-2;
         if(x==0 || y==0 || x==ms.getSize()+1 || y==ms.getSize()+1)return;
