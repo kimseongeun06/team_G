@@ -1,4 +1,3 @@
-
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.event.MouseEvent;
@@ -13,8 +12,9 @@ import java.awt.*;
 import javax.imageio.ImageIO;
 import javax.sql.rowset.RowSetWarning;
 import javax.swing.*;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
 
 public class SingleGameGUI extends JFrame {
 	/**
@@ -33,12 +33,35 @@ public class SingleGameGUI extends JFrame {
 	private int row;
 
 	public SingleGameGUI(int id, String name, int order, int size) {
-		super("1인용 오목게임");
+		super("OmokJomok");
 
 		this.id = id;
 		this.name = name;
 		this.order = order;
 		this.size = size;
+		
+		JMenuBar menuBar = new JMenuBar();
+		setJMenuBar(menuBar);
+		
+		JMenu mnNewMenu = new JMenu("\uD30C\uC77C");
+		menuBar.add(mnNewMenu);
+		
+		JMenuItem mntmNewMenuItem = new JMenuItem("\uBA54\uB274\uD654\uBA74\uC73C\uB85C \uB3CC\uC544\uAC00\uAE30");
+		mntmNewMenuItem.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				new MainFrame();
+				setVisible(false);
+			}
+		});
+		mnNewMenu.add(mntmNewMenuItem);
+		
+		JMenuItem mntmNewMenuItem_1 = new JMenuItem("\uC885\uB8CC");
+		mntmNewMenuItem_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);
+			}
+		});
+		mnNewMenu.add(mntmNewMenuItem_1);
 
 		// 오목판 설정
 		if (size == 0)
@@ -94,7 +117,7 @@ public class SingleGameGUI extends JFrame {
 		c.setLayout(new FlowLayout());
 		c.add(panel);
 
-		this.setSize(760, 780);
+		this.setSize(800, 830);
 		this.setLocation(100, 100);
 		this.setVisible(true);
 		this.setResizable(false);
@@ -139,7 +162,6 @@ public class SingleGameGUI extends JFrame {
 			// 사용자 승리
 			if (userWin == true) {
 				JOptionPane.showMessageDialog(null, "[흑] 사용자 승리");
-
 				v.clear();
 				gameBoard.initBoard();
 				repaint();
@@ -151,7 +173,7 @@ public class SingleGameGUI extends JFrame {
 					computerPlay();
 					repaint();
 				}
-			}
+			}			
 			// 컴퓨터 승리
 			if (comWin == true) {
 				JOptionPane.showMessageDialog(null, "[백] 컴퓨터 승리");

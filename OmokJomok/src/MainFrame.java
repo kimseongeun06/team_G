@@ -89,6 +89,8 @@ public class MainFrame extends JFrame {
          @Override
          public void mouseClicked(MouseEvent e) {
             //마우스 클릭시
+        	 oGui = new OnePlayerGUI();
+        	 setVisible(false);
 
          }
       });
@@ -116,7 +118,11 @@ public class MainFrame extends JFrame {
       btnNewButton_2.addMouseListener(new MouseAdapter() {
 			@Override
 			public void mouseClicked(MouseEvent e) {
-
+				new GUI(null);
+	            setVisible(false);
+	            GUI.obstacle=true;
+	            Map.obstacle=true;
+	            Map.checkobstacle();
 			}
 		});
 
